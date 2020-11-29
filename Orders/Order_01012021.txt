@@ -1,0 +1,3 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+6,Test Test,CA,25.00,Tile,100,3.50,4.15,350.00,415.00,191.2500,956.2500
+7,Test 2,CA,25.00,Carpet,125,2.25,2.10,281.25,262.50,135.9375,679.6875

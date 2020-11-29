@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="io" class="com.tom.flooringorder.ui.UserIOConsoleImpl" />
+    
+    <bean id="exportDao" class="com.tom.flooringorder.dao.ExportDaoFileImpl" />
+    <bean id="productDao" class="com.tom.flooringorder.dao.ProductDaoFileImpl" />
+    <bean id="stateDao" class="com.tom.flooringorder.dao.StateTaxDaoFileImpl" />
+    
+    <bean id="view" class="com.tom.flooringorder.ui.View">
+        <constructor-arg ref="io" />
+    </bean>
+    
+    <bean id="orderDao" class="com.tom.flooringorder.dao.OrderDaoFileImpl">
+        <constructor-arg ref="productDao" />
+        <constructor-arg ref="stateDao" />
+    </bean>
+    
+    <bean id="service" class="com.tom.flooringorder.service.ServiceLayerImpl">
+        <constructor-arg ref="exportDao" />
+        <constructor-arg ref="orderDao" />
+        <constructor-arg ref="productDao" />
+        <constructor-arg ref="stateDao" />
+    </bean>
+    
+    <bean id="controller" class="com.tom.flooringorder.controller.Controller">
+        <constructor-arg ref="view" />
+        <constructor-arg ref="service" />
+    </bean>
+    
+</beans>

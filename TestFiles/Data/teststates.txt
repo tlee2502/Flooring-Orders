@@ -1,0 +1,4 @@
+State,StateName,TaxRate
+AL,Alabama,2.50
+AZ,Arizona,4.00
+AR,Arkansas,6.30

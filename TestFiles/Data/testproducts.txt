@@ -1,0 +1,4 @@
+ProductType,CostPerSquareFoot,LaborCostPerSquareFoot
+Board,1.25,2.00
+Foam,0.75,0.50
+Metal,10.00,15.00
